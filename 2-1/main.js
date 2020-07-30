@@ -1,0 +1,1 @@
+console.log((process.argv[2] * 100 )/process.argv[3] + '%');
