@@ -17,11 +17,13 @@ students.forEach((student) =>{
   }
 })
 
-// for(let i = 0 ;i < 3 ; i++){
-//   for(let m = 0 ;m < 11 ; m++){
-//     if(table[i][m]===''
-//   }
-// }
+for(let i = 0 ;i < 3 ; i++){
+  for(let m = 0 ;m < 11 ; m++){
+    if(table[i][m]===''){
+      table[i][m] = ' ';
+    }
+  }
+}
 
 
 // console.table(table[0]);
