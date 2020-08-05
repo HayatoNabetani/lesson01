@@ -6,7 +6,9 @@ const nums = [
   Number(process.argv[6]),
 ]
 
-console.log(nums);
-console.log(nums.sort((a,b)=>{
+
+const newNum = nums.sort((a,b)=>{
   return a-b;
-}));
+});
+
+console.log(newNum[2]);
