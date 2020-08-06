@@ -1,6 +1,5 @@
 const names = process.argv[2].toLowerCase().split(',').sort();
 
-console.log(names);
 const filterLists = (items,query) => {
   return items.filter((item) => item.includes(query))
 };
