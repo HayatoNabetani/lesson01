@@ -1,13 +1,18 @@
 async function load(){
-  const data = await fetch('playdata.json');
-  const obj = await data.json();
+  const playData = await fetch('playdata.json');
+  const objPlay = await playData.json();
+  // playdataのもの
+  
+  const songData = await fetch('songs.json');
+  const objSong = await songData.json();
+  // songsdataのもの
 
-  const obj2 = obj.data.sort((a,b) =>{
+  const objPlay2 = objPlay.data.sort((a,b) =>{
     return b.count - a.count;
   })
-  // 大きい順に変える
-  
-  console.log(obj2);
+  // playdataを大きい順に変える
+
+  console.log(objPlay2);
     
 };
 
