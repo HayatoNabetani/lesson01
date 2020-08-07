@@ -9,24 +9,26 @@ const json = {
   ],
 };
 
-const a = [];
 for(let i = 0; i < json.users.length; i++){
   if(json.users[i].rank === 'A' && json.users[i].years < 5){
-    a[i] = 3000 *  json.users[i].years +100000;
+    json.users[i].salary = 3000 *  json.users[i].years +100000;
   } else if (json.users[i].rank === 'A' && json.users[i].years >= 5){
-    a[i] = 3000 *  json.users[i].years +120000;
+    json.users[i].salary = 3000 *  json.users[i].years +120000;
   } else if (json.users[i].rank === 'B'){
-    a[i] = 4000 *  json.users[i].years +140000;
+    json.users[i].salary = 4000 *  json.users[i].years +140000;
   } else {
-    a[i] = 5000 *  json.users[i].years +160000;
+    json.users[i].salary = 5000 *  json.users[i].years +160000;
   }
 }
 // 給与計算
 
-const b = a.sort((a,b) =>{
-  return b-a;
+const lists = json.users.sort((a,b) =>{
+  return b.salary-a.salary;
 })
-
-console.log(b);
-
 // 並び替え
+
+
+lists.forEach(list =>{
+  console.log(`${list.name}:${list.salary}`);
+})
+// 出力
