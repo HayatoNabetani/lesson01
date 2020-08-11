@@ -1,10 +1,15 @@
-const vertical = process.argv[2];
+const vertical = Number(process.argv[2]);
 
-for(let i = 0 , shape = ''; i < vertical ; i++){
+let table = [];
 
-  for(let m = 0; m < vertical * 2 ; m++){
-    shape += 4-i <= m && m <= 4+i ? '*' : ' ';
+for(let i = 0; i < vertical ; i++){
+  table = [];
+  for(let m = 0; m <= vertical * 2 ; m++){
+    if (vertical-i <= m && m <= vertical+i){
+      table.push('*');
+    } else {
+      table.push('1');
+    }
   }
-  console.log(shape);
-  shape = '';
+  console.log(table.join(''));
 }
