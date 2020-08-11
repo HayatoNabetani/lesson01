@@ -3,17 +3,39 @@ const unum2 = process.argv[3].split('');
 
 // console.log(unum1.split(''));
 // 一文字ずつ区切る
-let a;
 
-a = unum1[0];
-unum1[0] = unum1[unum1.length - 1];
-unum1[unum1.length - 1] = a;
-
-
-a = unum2[0];
-unum2[0] = unum2[unum2.length - 1];
-unum2[unum2.length - 1] = a;
-
+// unum1を逆にする
+if(unum1.length % 2 === 0){
+  for(let i = 0 ; i < unum1.length / 2; i++){
+    let a;
+    a = unum1[i];
+    unum1[i] = unum1[(unum1.length - 1) - i];
+    unum1[(unum1.length - 1) - i] = a;
+  }
+} else {
+  for(let i = 0 ; i < Math.floor(unum1.length / 2); i++){
+    let a;
+    a = unum1[i];
+    unum1[i] = unum1[(unum1.length - 1) - i];
+    unum1[(unum1.length - 1) - i] = a;
+  }
+}
+// unum2を逆にする
+if(unum2.length % 2 === 0){
+  for(let i = 0 ; i < unum2.length / 2; i++){
+    let a;
+    a = unum2[i];
+    unum2[i] = unum2[(unum2.length - 1) - i];
+    unum2[(unum2.length - 1) - i] = a;
+  }
+} else {
+  for(let i = 0 ; i < Math.floor(unum2.length / 2); i++){
+    let a;
+    a = unum2[i];
+    unum2[i] = unum2[(unum2.length - 1) - i];
+    unum2[(unum2.length - 1) - i] = a;
+  }
+}
 const num1 = Number(unum1.join(''));
 const num2 = Number(unum2.join(''));
 
